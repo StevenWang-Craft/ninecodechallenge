@@ -25,11 +25,11 @@ namespace TvProgramJsonProcessor.Controllers
                             Slug = x.Slug,
                             Title = x.Title
                         });
-                    return Ok(new { response = result});
+                    return Ok(new successResposneDto { response = result });
                 }
                 catch
                 {
-                    var myError = new
+                    var myError = new failureResposneDto
                     {
                         error = "Could not decode request: JSON parsing failed"
                     };

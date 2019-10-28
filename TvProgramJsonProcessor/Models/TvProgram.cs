@@ -51,6 +51,15 @@ namespace TvProgramJsonProcessor.Models
         public string Image { get; set; }
         public string Slug { get; set; }
         public string Title { get; set; }
-        
+    }
+
+    public class successResposneDto
+    {
+        public IEnumerable<TvProgramResponse> response { get; set; }
+    }
+
+    public class failureResposneDto
+    {
+        public string error { get; set; }
     }
 }
